@@ -26,9 +26,7 @@ const History = ({ showTable, setShowTable, children }) => {
     if (showTable) {
       fetchAllData();
     }
-    // Optionally clear data when hiding table:
-    // else setData([]);
-    // eslint-disable-next-line
+
   }, [showTable]);
 
   if (showTable) {

@@ -60,46 +60,4 @@ body {
   padding: 2rem 0 2.5rem 0;
   position: relative;
 }
-.history-table-large {
-  width: 100%;
-  max-width: 900px;
-  min-height: 70vh;
-  background: rgba(245,245,245,0.7);
-  border-radius: 2rem;
-  box-shadow: 0 2px 12px #0001;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 2rem 0 2.5rem 0;
-  position: relative;
-  margin: 0 auto;
-}
 
-.history-table {
-  width: 95%;
-  max-width: 850px;
-  border-collapse: collapse;
-  background: #fff;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 8px #0001;
-}
-.history-table th, .history-table td {
-  padding: 0.7rem 1rem;
-  border: 1px solid #ddd;
-}
-.history-table th {
-  background: #f0f0f0;
-  font-weight: bold;
-  text-align: center;
-}
-.history-td-center {
-  text-align: center;
-}
-.history-td-value {
-  color: #4caf50;
-  text-align: center;
-  font-weight: 500;
-}
