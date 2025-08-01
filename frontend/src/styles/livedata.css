@@ -1,0 +1,40 @@
+
+.live-data-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.live-data-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 1rem;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px #0001;
+  min-width: 180px;
+}
+
+.live-data-info {
+  margin-right: 1.5rem;
+  text-align: center;
+}
+
+.live-data-parameter {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #aaa400;
+}
+
+.live-data-value {
+  font-size: 1.5em;
+  color: #d8d100;
+  margin-top: 0.3em;
+}
+
+.circular-graph {
+  display: block;
+}

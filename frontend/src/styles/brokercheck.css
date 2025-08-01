@@ -1,0 +1,48 @@
+.broker-status-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.broker-status-success {
+  color: green;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.broker-status-fail {
+  color: red;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.broker-check {
+  padding: 12px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loading{
+  padding: 12px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.broker-check span {
+  font-size: 14px;
+}
+
+.broker-check .status {
+  font-weight: bold;
+}
+
+.broker-check .status.connected {
+  color: green;
+}
+
+.broker-check .status.disconnected {
+  color: red;
+}

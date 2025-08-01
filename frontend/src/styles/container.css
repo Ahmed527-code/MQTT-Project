@@ -1,0 +1,105 @@
+/* View All Data button row */
+.view-all-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.view-all-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0001;
+  background: linear-gradient(90deg, #fff700 0%, #d8d100 100%);
+  transition: filter 0.2s;
+}
+.view-all-btn:hover {
+  filter: brightness(0.95);
+}
+body {
+  background: #fff;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 2rem;
+  background: #fff;
+}
+
+.header {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffe600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.dashboard-content {
+  width: 100%;
+  max-width: 500px;
+  min-height: 70vh;
+  background: rgba(245,245,245,0.7);
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px #0001;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0 2.5rem 0;
+  position: relative;
+}
+.history-table-large {
+  width: 100%;
+  max-width: 900px;
+  min-height: 70vh;
+  background: rgba(245,245,245,0.7);
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px #0001;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0 2.5rem 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+.history-table {
+  width: 95%;
+  max-width: 850px;
+  border-collapse: collapse;
+  background: #fff;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #0001;
+}
+.history-table th, .history-table td {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+}
+.history-table th {
+  background: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+.history-td-center {
+  text-align: center;
+}
+.history-td-value {
+  color: #4caf50;
+  text-align: center;
+  font-weight: 500;
+}
