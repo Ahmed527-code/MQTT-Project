@@ -4,11 +4,12 @@ A full-stack MQTT dashboard for real-time monitoring and historical analysis of 
 
 ## Features
 
-- **Live MQTT Data Feed:** View the latest MQTT messages in real time.
+- **Live MQTT Data Feed:** View the latest MQTT messages in real-time, with individual graphs for each parameter.
 - **Broker Status:** See the current connection status of your MQTT broker.
 - **History Table:** Fetch and filter all historical MQTT data in a responsive table.
 - **Parameter List:** View all available parameters from your MQTT data.
 - **Modern UI:** Clean, responsive React frontend styled for clarity and usability.
+- **MQTT Publisher:** Publish MQTT messages to the broker using the `npm run publisher` command.
 
 ## Tech Stack
 
@@ -53,12 +54,17 @@ A full-stack MQTT dashboard for real-time monitoring and historical analysis of 
    cd backend
    npm start
    ```
-2. **Start the frontend dev server:**
+2. **Publishing MQTT Messages:**
+   ```sh
+   cd backend
+   npm run publisher
+   ```
+3. **Start the frontend dev server:**
    ```sh
    cd frontend
    npm run dev
    ```
-3. Open your browser at [http://localhost:5173](http://localhost:5173)
+4. Open your browser at [http://localhost:5173](http://localhost:5173)
 
 ## Folder Structure
 

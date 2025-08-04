@@ -81,7 +81,7 @@ client.on('message', async (topic, message) => {
       const entries = Object.entries(data);
       for (const [parameter, value] of entries) {
         if (typeof value === 'number') {
-          await MQTTMessage.create({ parameter, value, timestamp });
+          await MQTTMessage.updateOne({ parameter }, { $set: {value, timestamp }}, { upsert: true });
         }
       }
     } catch (err) {

@@ -1,22 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import FilterForm from '../FilterForm/filter';
 import '../../styles/history.css';
 
 const History = ({ showTable, setShowTable, children }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [parameters, setParameters] = useState([]);
 
 
-  const fetchAllData = async () => {
+  // Fetch available parameters for filter dropdown
+  useEffect(() => {
+    if (showTable) {
+      axios.get('http://localhost:3000/api/parameter')
+        .then(res => setParameters(res.data.parameters || []))
+        .catch(() => setParameters([]));
+    }
+  }, [showTable]);
+
+  // Fetch history data (all or filtered)
+  const fetchHistory = async (filters = {}) => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get('http://localhost:3000/api/history');
+      const params = new URLSearchParams();
+      if (filters.parameter) params.append('parameter', filters.parameter);
+      if (filters.startDate) params.append('startDate', filters.startDate);
+      if (filters.endDate) params.append('endDate', filters.endDate);
+      const url = params.toString()
+        ? `http://localhost:3000/api/history?${params.toString()}`
+        : 'http://localhost:3000/api/history';
+      const res = await axios.get(url);
       setData(res.data.messages || []);
     } catch (err) {
-      console.error('Failed to fetch history:', err);
       setError('Failed to fetch data');
+      console.error(err);
     } finally {
       setLoading(false);
     }
@@ -24,14 +43,14 @@ const History = ({ showTable, setShowTable, children }) => {
 
   useEffect(() => {
     if (showTable) {
-      fetchAllData();
+      fetchHistory();
     }
-
   }, [showTable]);
 
   if (showTable) {
     return (
       <div className="history-table-large">
+        <FilterForm parameters={parameters} onFilter={fetchHistory} />
         <table className="history-table">
           <thead>
             <tr>
